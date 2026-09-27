@@ -1,0 +1,653 @@
+* {
+  box-sizing: border-box
+}
+
+:root {
+  --paper: #fffaf5;
+  --paper2: #f7eee6;
+  --ink: #302a28;
+  --muted: #7e726c;
+  --rose: #c98e8c;
+  --rose-dark: #9d6666;
+  --gold: #b99963;
+  --line: #e9ddd3;
+  --white: #fff;
+  --shadow: 0 22px 60px rgba(66, 45, 35, .10);
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--paper);
+  color: var(--ink)
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden
+}
+
+button,
+input {
+  font: inherit
+}
+
+button {
+  cursor: pointer
+}
+
+.hidden {
+  display: none !important
+}
+
+.screen {
+  min-height: 100vh
+}
+
+.lock-screen {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(201, 142, 140, .13), transparent 25%),
+    radial-gradient(circle at 85% 80%, rgba(185, 153, 99, .12), transparent 25%), var(--paper)
+}
+
+.lock-card {
+  text-align: center;
+  width: min(570px, 100%);
+  padding: 55px 28px
+}
+
+.bouquet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.bouquet img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 8px rgba(60, 40, 30, 0.08));
+}
+
+.bouquet span {
+  font-size: 18px;
+  color: #b99963;
+}
+
+.eyebrow,
+.mini-label {
+  font-size: 10px;
+  letter-spacing: .25em;
+  font-weight: 700;
+  color: var(--rose-dark)
+}
+
+.lock-card h1 {
+  font: 600 clamp(48px, 10vw, 78px)/.9 "Cormorant Garamond", serif;
+  margin: 18px 0 22px
+}
+
+em {
+  font-style: italic;
+  color: var(--rose-dark)
+}
+
+.intro {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px
+}
+
+.code-wrap {
+  margin: 34px auto 0;
+  max-width: 340px;
+  display: grid;
+  gap: 10px
+}
+
+.code-wrap input {
+  height: 54px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .7);
+  text-align: center;
+  letter-spacing: .35em;
+  outline: none;
+  color: var(--ink)
+}
+
+.code-wrap input:focus {
+  border-color: var(--rose)
+}
+
+.code-wrap button {
+  height: 54px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--ink);
+  color: #fff;
+  letter-spacing: .02em;
+  transition: .2s
+}
+
+.code-wrap button:hover {
+  transform: translateY(-2px);
+  background: #463a35
+}
+
+.error {
+  height: 18px;
+  color: #a65f5f;
+  font-size: 12px;
+  opacity: 0;
+  transition: .2s
+}
+
+.error.show {
+  opacity: 1
+}
+
+.hint {
+  font-size: 11px;
+  color: #a59a94;
+  margin-top: 18px
+}
+
+.hint span {
+  color: var(--rose-dark)
+}
+
+.app-screen {
+  max-width: 1100px;
+  margin: auto;
+  padding: 28px 24px 50px
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px
+}
+
+.topbar h2 {
+  font: 600 28px "Cormorant Garamond", serif;
+  margin: 5px 0 0
+}
+
+.heart-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 21px;
+  color: var(--rose-dark)
+}
+
+.hero {
+  min-height: 410px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 65px 4% 55px
+}
+
+.hero h1 {
+  font: 600 clamp(54px, 8vw, 90px)/.84 "Cormorant Garamond", serif;
+  margin: 16px 0 25px
+}
+
+.hero p {
+  max-width: 410px;
+  color: var(--muted);
+  line-height: 1.8
+}
+
+.hero-flower {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.hero-flower img {
+    width: 360px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.hero-flower span {
+  font-size: 25px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.anniversary {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #f3e6df;
+  border: 1px solid #ead7cd;
+  border-radius: 22px;
+  padding: 22px 25px;
+  margin-bottom: 60px
+}
+
+.anniv-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--rose-dark);
+  display: grid;
+  place-items: center;
+  font-size: 25px
+}
+
+.anniversary span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: .22em;
+  color: var(--rose-dark);
+  font-weight: 700
+}
+
+.anniversary strong {
+  display: block;
+  font: 600 30px "Cormorant Garamond", serif;
+  margin: 2px 0
+}
+
+.anniversary p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px
+}
+
+.section-title {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 24px
+}
+
+.section-title h3 {
+  font: 600 42px "Cormorant Garamond", serif;
+  margin: 5px 0 0
+}
+
+.count {
+  font-size: 10px;
+  letter-spacing: .2em;
+  color: var(--muted)
+}
+
+.day-card {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  display: grid;
+  grid-template-columns: 105px 1fr 245px;
+  gap: 28px;
+  align-items: center
+}
+
+.day-number {
+  font: 600 50px "Cormorant Garamond", serif;
+  color: #bda89d
+}
+
+.day-number small {
+  display: block;
+  font: 700 9px "DM Sans", sans-serif;
+  letter-spacing: .2em;
+  color: var(--muted);
+  margin-top: -6px
+}
+
+.day-content .date {
+  font-size: 10px;
+  letter-spacing: .2em;
+  color: var(--rose-dark);
+  font-weight: 700
+}
+
+.day-content h4 {
+  font: 600 31px "Cormorant Garamond", serif;
+  margin: 6px 0
+}
+
+.day-content p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0
+}
+
+.places {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 15px
+}
+
+.place {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #514741;
+  font-size: 12px
+}
+
+.place i {
+  font-style: normal;
+  color: var(--rose-dark)
+}
+
+.day-photo {
+  height: 155px;
+  border-radius: 17px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  background-size: cover;
+  background-position: center
+}
+
+.day-photo:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 45%, rgba(25, 18, 14, .55))
+}
+
+.photo-label {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  z-index: 1;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: .08em
+}
+
+.memory-badge {
+  position: absolute;
+  right: 11px;
+  top: 11px;
+  z-index: 2;
+  background: rgba(255, 255, 255, .9);
+  border-radius: 99px;
+  padding: 7px 9px;
+  font-size: 10px;
+  color: var(--rose-dark)
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid var(--line);
+  margin-top: 55px;
+  padding-top: 35px;
+  color: #a59a94;
+  font: italic 18px "Cormorant Garamond", serif
+}
+
+footer span {
+  display: block;
+  font: 700 9px "DM Sans";
+  letter-spacing: .25em;
+  margin-top: 10px;
+  color: var(--rose-dark)
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 20px
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(38, 28, 23, .55);
+  backdrop-filter: blur(8px)
+}
+
+.memory-card {
+  position: relative;
+  z-index: 1;
+  background: #fffaf5;
+  border-radius: 22px;
+  padding: 24px;
+  max-width: 390px;
+  width: 100%;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .25);
+  animation: pop .3s ease
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(.97)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+.close {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  border: 0;
+  background: transparent;
+  font-size: 27px;
+  color: #756963;
+  z-index: 2
+}
+
+.polaroid {
+  background: #fff;
+  padding: 12px 12px 18px;
+  box-shadow: 0 9px 24px rgba(0, 0, 0, .12);
+  transform: rotate(-1deg)
+}
+
+.memory-image {
+  height: 330px;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(.85)
+}
+
+.polaroid-caption {
+  text-align: center;
+  padding-top: 12px
+}
+
+.polaroid-caption strong {
+  display: block;
+  font: 600 24px "Cormorant Garamond", serif
+}
+
+.polaroid-caption span {
+  font-size: 9px;
+  letter-spacing: .16em;
+  color: #968a83
+}
+
+.memory-card>p {
+  text-align: center;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 13px;
+  margin: 20px 10px 3px
+}
+
+#petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden
+}
+
+.petal {
+  position: absolute;
+  top: -30px;
+  font-size: 16px;
+  animation: fall linear forwards;
+  opacity: .75
+}
+
+@keyframes fall {
+  to {
+    transform: translate3d(var(--drift), 110vh, 0) rotate(420deg);
+    opacity: .1
+  }
+}
+
+@media(max-width:760px) {
+  .app-screen {
+    padding: 18px 17px 40px
+  }
+
+  .hero {
+    min-height: 430px;
+    padding: 55px 3% 45px;
+    display: block
+  }
+
+  .hero-flower {
+    width: 100%;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .hero-flower img {
+    width: 75px;
+    height: 95px;
+  }
+
+  .hero-flower span {
+    font-size: 18px;
+  }
+
+  .anniversary {
+    align-items: flex-start
+  }
+
+  .section-title h3 {
+    font-size: 34px
+  }
+
+  .day-card {
+    grid-template-columns: 65px 1fr;
+    gap: 14px
+  }
+
+  .day-photo {
+    grid-column: 1/-1;
+    height: 200px
+  }
+
+  .day-number {
+    font-size: 42px
+  }
+
+  .day-content h4 {
+    font-size: 28px
+  }
+}
+
+/* GERİ SAYIM SAYACI STİLLERİ */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 25px 0 10px;
+}
+
+.countdown div {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  min-width: 65px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(66, 45, 35, .03);
+}
+
+.countdown strong {
+  display: block;
+  font: 600 26px "Cormorant Garamond", serif;
+  color: var(--rose-dark);
+  line-height: 1.1;
+}
+
+.countdown span {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  margin-top: 4px;
+}
+
+/* PAPATYA ANİMASYONU (GÜNCELLENDİ) */
+#petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  top: -60px;
+  /* Ekranın hemen üstünden başlasın */
+  animation: fall linear infinite;
+  /* Sürekli dökülmesi için infinite yapıldı */
+  opacity: 0.85;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  /* Görsele hafif derinlik */
+}
+
+@keyframes fall {
+  0% {
+    transform: translate3d(0, -50px, 0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(var(--drift), 110vh, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
