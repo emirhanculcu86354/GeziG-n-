@@ -1,9 +1,9 @@
 const TRIP = {
   password: "19",
-  targetDate: "2026-11-18T13:30:00", // Buluşacağınız tarihi buradan ayarlayabilirsin
+  targetDate: "2026-11-17T13:30:00", // Buluşacağınız tarihi buradan ayarlayabilirsin
   days: [
     {
-      n:"01", date:"18 KASIM", title:"Yola çıkıyoruz",
+      n:"01", date:"17 KASIM", title:"Yola çıkıyoruz",
       text:"İlk günümüz. Şehre varış, otele yerleşme ve birlikte keşfetmeye başlayacağımız sakin bir akşam.",
       places:["Varış","Dürüm500Ankara","Kuğulu Pasajı(Parfüm)","50.Parkı","Gece Çorbası","Otel Giriş"],
       image:"tunalı kahvaltı.jpeg",
@@ -11,7 +11,15 @@ const TRIP = {
       
     },
     {
-      n:"02", date:"19 KASIM", title:"1. Yılımız ♡",
+      n:"02", date:"18 KASIM", title:"Yeni Plannn",
+      text:"İlk günümüz. Şehre varış, otele yerleşme ve birlikte keşfetmeye başlayacağımız sakin bir akşam.",
+      places:["Mağra GölBaşı","Köşk","Gaveci cage","Kuğulu Pakr","Beraber vakit kafamıza göre"],
+      image:"bizz.jpeg",
+      memory:true, memoryTitle:"Benim Güzeliiiimmm", memoryDate:"19 KASIM ",
+      
+    },
+    {
+      n:"03", date:"19 KASIM", title:"1. Yılımız ♡",
       text:"Bugün sıradan bir gün değil. Bir yıl önce başlayan hikâyemizin yeni sayfasını birlikte açıyoruz.",
       places:["Eymir Gölü (bisiklet ve kahvaltı)","Saç Kesimi","Portakal Çiçeği Parkı","Millet Kütüphanesi","Türk Tarih Müzesi ve Parkı","Yıl Dönümü Yemeğimiz"],
       image:"19mayıs.jpeg",
@@ -19,14 +27,14 @@ const TRIP = {
       memoryText:"İlk sevgili olduğumuz gün balım nice yıllarımız bir ömrümüz olsun beraber çok seviyorum çok bi sürüü seni"
     },
     {
-      n:"03", date:"20 KASIM", title:"Şehri keşfet",
+      n:"04", date:"20 KASIM", title:"Şehri keşfet",
       text:"Biraz tarih, biraz kahve, bolca piknikk. Plansızca kaybolabileceğimiz gün.",
       places:["Mavi Göl","Atatürk Orman Çiftliği","Körserlik Göleti","Hava Müzesi","Türk Rus Dostluk Evi Kültür ve Sanat","Sürpsiz Bir Yer"],
       image:"piknik12.jpeg",
       memory:true, memoryTitle:"Bizim ilk pikniğimizzz", memoryDate:"12 MAYIS ",
     },
     {
-      n:"04", date:"21 KASIM", title:"Biz bize",
+      n:"05", date:"21 KASIM", title:"Biz bize",
       text:"Bugünü en eğlenceli haliyle yapıyoruzz balımmm. Güzel bir kahvaltı, sevdiğimiz yerler ve birlikte bol bol fotoğraf.",
       places:["İsmail Abi Kahvaltı","Zeplinx(Forumankaraavm)","Burgasm","Lunapark","Luum x Dandelion Cafe","Art Artisan Cafe","Sinema"],
       image:"gösteri.jpeg",
@@ -34,7 +42,7 @@ const TRIP = {
       memoryText:"AH ahhh sevgilim klasik müzik dinlediğimiz mükemmel bir günnn"
     },
     {
-      n:"05", date:"22 KASIM", title:"Son sayfa değil",
+      n:"06", date:"22 KASIM", title:"Son sayfa değil",
       text:"Dönüş günü. Bavullar kapanıyor ama defter burada bitmiyor. Bir sonraki yolculuğun ilk cümlesini yazıyoruz.",
       places:["Tunalı Kahvaltı","Luuq Çukurambar","Beraber Zaman ve Eve dönüş"],
       image:"son gün.jpeg",
