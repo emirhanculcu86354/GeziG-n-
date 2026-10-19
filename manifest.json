@@ -1,0 +1,24 @@
+{
+  "name": "Bizim Gezi Defterimiz ♡",
+  "short_name": "Gezi Defteri",
+  "description": "Dilala & Emoç Gezi Defteri — 18-22 Kasım",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fffaf5",
+  "theme_color": "#fffaf5",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "logo.JPEG",
+      "sizes": "192x192",
+      "type": "image/JPEG",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo.JPEG",
+      "sizes": "512x512",
+      "type": "image/JPEG",
+      "purpose": "any maskable"
+    }
+  ]
+}
