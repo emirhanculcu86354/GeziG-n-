@@ -14,7 +14,7 @@ const TRIP = {
       n:"02", date:"18 KASIM", title:"Yeni Plannn",
       text:"Bize Özel Yeni Günümüzzzz",
       places:["Mağra GölBaşı","Köşk","Gaveci cage","Kuğulu Pakr","Beraber vakit kafamıza göre"],
-      image:"bizz.jpeg",
+      image:"bizz.JPEG",
       memory:true, memoryTitle:"Benim Güzeliiiimmm", memoryDate:"19 KASIM ",
       
     },
